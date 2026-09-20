@@ -309,6 +309,25 @@
     color:var(--ink);
   }
   .due-note b{ color:var(--sand); }
+  .payment-embed{
+    grid-column:1/-1;
+    margin-top:14px;
+    border:1px solid var(--line);
+    border-radius:10px;
+    padding:16px 16px 4px;
+    background:var(--panel);
+  }
+  .payment-embed-head{
+    font-family:"Fraunces", serif;
+    font-weight:600;
+    font-size:15px;
+    color:var(--brand-deep);
+    margin-bottom:10px;
+  }
+  .payment-embed iframe{
+    display:block;
+    max-width:100%;
+  }
 
   .dress{
     display:grid;
@@ -550,6 +569,28 @@
           <span><b>Payment is due on the 1st of every month.</b> Please arrange payment before the start of each month to avoid a lapse in enrollment.</span>
         </div>
       </div>
+      <div class="payment-embed">
+        <div class="payment-embed-head">Pay Online</div>
+        <iframe
+          src="https://app.sahabayouthcentre.com/widget/form/UrlS33HugMJivUKz3FxJ"
+          style="width:100%;height:1039px;border:none;border-radius:8px"
+          id="inline-UrlS33HugMJivUKz3FxJ"
+          data-layout="{'id':'INLINE'}"
+          data-trigger-type="alwaysShow"
+          data-trigger-value=""
+          data-activation-type="alwaysActivated"
+          data-activation-value=""
+          data-deactivation-type="neverDeactivate"
+          data-deactivation-value=""
+          data-form-name="SYC website form general donation "
+          data-height="1039"
+          data-layout-iframe-id="inline-UrlS33HugMJivUKz3FxJ"
+          data-form-id="UrlS33HugMJivUKz3FxJ"
+          data-cookie-consent="true"
+          data-cookie-consent-provider="auto"
+          title="SYC website form general donation "
+        ></iframe>
+      </div>
     </section>
 
     <section>
@@ -666,5 +707,6 @@
   document.getElementById("submit-btn-fab").addEventListener("click", submitByEmail);
 })();
 </script>
+<script src="https://app.sahabayouthcentre.com/js/form_embed.js"></script>
 </body>
 </html>
