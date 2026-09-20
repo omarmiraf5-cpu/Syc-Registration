@@ -323,10 +323,36 @@
     font-size:15px;
     color:var(--brand-deep);
     margin-bottom:10px;
+    text-align:center;
   }
-  .payment-embed iframe{
+  .payment-embed-frame{
+    max-width:420px;
+    margin:0 auto;
+    border-radius:8px;
+    box-shadow:var(--shadow-sm);
+    overflow:hidden;
+  }
+  .payment-embed-frame iframe{
     display:block;
+    width:100%;
     max-width:100%;
+    transition:height .2s ease;
+  }
+  @media (max-width:600px){
+    .payment-embed-frame{ max-width:100%; }
+  }
+  @media (max-width:480px){
+    .payment-embed{
+      margin-left:-32px;
+      margin-right:-32px;
+      border-left:none;
+      border-right:none;
+      border-radius:0;
+      padding:14px 16px 4px;
+    }
+  }
+  @media (max-width:520px) and (min-width:481px){
+    .payment-embed{ margin-left:-32px; margin-right:-32px; border-left:none; border-right:none; border-radius:0; padding:14px 24px 4px; }
   }
 
   .dress{
@@ -571,25 +597,27 @@
       </div>
       <div class="payment-embed">
         <div class="payment-embed-head">Pay Online</div>
-        <iframe
-          src="https://app.sahabayouthcentre.com/widget/form/UrlS33HugMJivUKz3FxJ"
-          style="width:100%;height:1039px;border:none;border-radius:8px"
-          id="inline-UrlS33HugMJivUKz3FxJ"
-          data-layout="{'id':'INLINE'}"
-          data-trigger-type="alwaysShow"
-          data-trigger-value=""
-          data-activation-type="alwaysActivated"
-          data-activation-value=""
-          data-deactivation-type="neverDeactivate"
-          data-deactivation-value=""
-          data-form-name="SYC website form general donation "
-          data-height="1039"
-          data-layout-iframe-id="inline-UrlS33HugMJivUKz3FxJ"
-          data-form-id="UrlS33HugMJivUKz3FxJ"
-          data-cookie-consent="true"
-          data-cookie-consent-provider="auto"
-          title="SYC website form general donation "
-        ></iframe>
+        <div class="payment-embed-frame">
+          <iframe
+            src="https://app.sahabayouthcentre.com/widget/form/UrlS33HugMJivUKz3FxJ"
+            style="width:100%;height:1039px;border:none;border-radius:8px"
+            id="inline-UrlS33HugMJivUKz3FxJ"
+            data-layout="{'id':'INLINE'}"
+            data-trigger-type="alwaysShow"
+            data-trigger-value=""
+            data-activation-type="alwaysActivated"
+            data-activation-value=""
+            data-deactivation-type="neverDeactivate"
+            data-deactivation-value=""
+            data-form-name="SYC website form general donation "
+            data-height="1039"
+            data-layout-iframe-id="inline-UrlS33HugMJivUKz3FxJ"
+            data-form-id="UrlS33HugMJivUKz3FxJ"
+            data-cookie-consent="true"
+            data-cookie-consent-provider="auto"
+            title="SYC website form general donation "
+          ></iframe>
+        </div>
       </div>
     </section>
 
